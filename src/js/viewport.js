@@ -30,6 +30,7 @@
            
 
           }
+
         } else {// iPad的适配
 
           var deviceWidth = padWidth;
@@ -58,23 +59,63 @@
 
           }
         }
-
+        hp();
         document.getElementsByTagName('head')[0].innerHTML += meta;
     }
     
+   var timestamp = '_'+Date.now();
+    function hp(){
 
+      
+
+   
+
+      if(document.body!=null){
+        if (window.orientation == 90 || window.orientation == -90 ) {
+          var div = document.createElement('div');
+            
+          div.id = timestamp;
+
+        
+
+          div.style.position = 'fixed';
+          div.style.left = 0;
+          div.style.top = 0;
+          div.style.right = 0;
+          div.style.bottom = 0;
+          div.style.zIndex = 1000000000;
+          div.style.background = '#ffffff';
+          div.style.color = '#000';
+          div.style.textAlign = 'center';
+          div.style.fontSize = '30px';
+            
+          div.innerHTML = "<span style='position:absolute;display:inline-block;left:50%;top:50%;margin-left:-150px;margin-top:-20px;'>竖屏查看体验更佳哦^0^";
+          div.style.paddingTop ='100px';
+          if(document.getElementById(timestamp)==null){ document.body.appendChild(div);}
+         
+
+
+        }else {
+
+           document.body.removeChild(document.getElementById(timestamp));
+          
+        }
+      }
+      
+      
+
+    }
     
-
     viewPort();
 
 
-   
+
 
 
     window.onorientationchange = function(){
       setTimeout(function(){
         viewPort();
-      },1);
+      },50);
     }
   }
 
