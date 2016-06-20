@@ -12,4 +12,4 @@ viewport depend <a href="https://github.com/fengweiqi/device" target="_blank">de
 	<script>
     new ViewPort(720,720);// mobileWidth,padWidth
 	</script>
-html
+```
