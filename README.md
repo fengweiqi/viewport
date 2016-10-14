@@ -3,7 +3,7 @@ for mobile viewport
 
 # how to use
 
-viewport depend on <a href="https://github.com/fengweiqi/device" target="_blank">device</a>
+viewport depend on <a href="https://github.com/fengweiqi/device" target="_blank">device.js</a>
 
 
 ```html
